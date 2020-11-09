@@ -5,7 +5,9 @@
     <li><%= patient.name %></li>
     <ul>
       <li>Age: <%= patient.age %></li>
-      <li>Doctor: <%= patient.doctor.name %></li>
+      <li>Doctor: <% patient.doctors.each do |doctor| %>
+      <%= doctor.name %>
+    <% end %></li>
     </ul>
   </section>
 </ol>

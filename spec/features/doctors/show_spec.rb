@@ -57,7 +57,6 @@ RSpec.describe 'As visitor when I visit the doctor show page' do
 
   it 'I can remove a patient from the doctor' do
     visit "/doctors/#{@doctor_grey.id}"
-binding.pry
     within "#patient-#{@patient_1.id}" do
       expect(page).to have_content(@patient_1.name)
       click_on 'Remove Patient'

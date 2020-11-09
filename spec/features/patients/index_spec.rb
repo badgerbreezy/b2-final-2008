@@ -61,7 +61,7 @@ RSpec.describe 'As visitor when I visit the patient index page' do
     end
 
     within "#patient-#{@patient_3.id}" do
-      expect(page).to have_content(@patient_3.doctor.name)
+      expect(page).to have_content(@doctor_grey.name)
     end
 
     within "#patient-#{@patient_4.id}" do
