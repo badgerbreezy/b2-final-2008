@@ -1,0 +1,12 @@
+<h1>All Patients</h1>
+<% @patients.each do |patient| %>
+<ol type = '1'>
+  <section id='patient-<%= patient.id %>'>
+    <li><%= patient.name %></li>
+    <ul>
+      <li>Age: <%= patient.age %></li>
+      <li>Doctor: <%= patient.doctor.name %></li>
+    </ul>
+  </section>
+</ol>
+<% end %>
