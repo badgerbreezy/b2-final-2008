@@ -6,7 +6,9 @@ class DoctorsController < ApplicationController
   def update
     @doctor = Doctor.find(params[:id])
     @patient = @doctor.patients.find(params[:patient_id])
-    @patient.update(doctor_id: nil)
+    if @patient
+      @doctor.patients.delete(@patient)
+    end
     redirect_to "/doctors/#{@doctor.id}"
   end
 end
