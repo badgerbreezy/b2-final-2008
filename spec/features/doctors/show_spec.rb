@@ -49,6 +49,5 @@ RSpec.describe 'As visitor when I visit the doctor show page' do
     expect(page).to have_content(@patient_1.name)
     expect(page).to have_content(@patient_2.name)
     expect(page).to have_content(@patient_3.name)
-binding.pry
   end
 end
