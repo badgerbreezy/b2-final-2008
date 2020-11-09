@@ -5,6 +5,12 @@
 <p>Patients:</p>
 <% @doctor.patients.each do |patient| %>
 <ol type = '1'>
-  <li><%= patient.name %></li>
+  <section id='patient-<%= patient.id %>'>
+    <li><%= patient.name %>
+      <%= form_tag "/doctors/#{@doctor.id}", method: :patch do %>
+        <%= hidden_field_tag :patient_id, patient.id %>
+        <%= submit_tag 'Remove Patient' %></li>
+        <% end %>
+  </section>
 </ol>
 <% end %>
